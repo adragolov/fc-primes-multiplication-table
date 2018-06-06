@@ -2,6 +2,9 @@ module FCPrimesMultiplicationTableLib
     
     module MathServices
 
+        #
+        # Class that capsulates an algorithm for finding prime numbers.
+        #
         class PrimeNumFinder
 
             public 
@@ -14,6 +17,17 @@ module FCPrimesMultiplicationTableLib
                 
             end
 
+            # Find the next prime number after a given argument
+            # Brute-force, greedy, no smart sieves
+            def getNextPrime(n)
+
+                result = n.to_i+1
+                result = result+1 until self.isPrime?(result)
+                result   
+            end 
+
+            # Retrieves a boolean indication if a given argument is a prime number. 
+            # Lookups range from 2 to square root of supplied argument
             def isPrime?(arg)
                 
                 normalized = arg.to_i

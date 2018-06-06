@@ -2,4 +2,5 @@
  
 echo 'Starting test run1'
 ruby ../tests/primeNumFinderTests.rb
+ruby ../tests/mathServicesTests.rb
 echo 'Test run finished1'
