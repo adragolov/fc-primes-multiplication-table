@@ -18,7 +18,9 @@ module FCPrimesMultiplicationTableLib
             parseCommandLine
 
             if helpRequested?
-                 displayUsage
+                displayUsage
+            elsif numberOfPrimes < 1 
+                displayInvalidNumberOfPrimes
             else
                 generatePrimes
                 computeCellSize
@@ -123,6 +125,13 @@ USAGE:
                             If not specified explicitly, a default value
                             of 10 is used.
             }
+        end
+
+        # Prints an error message on the standard output when invalid count
+        # argument is provided.
+        def self.displayInvalidNumberOfPrimes
+
+            puts "[ERROR] Invalid value #{numberOfPrimes} for argument 'count'. Values >= 1 expected."
         end
     end
 end
