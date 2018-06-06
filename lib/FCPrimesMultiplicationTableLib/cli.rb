@@ -19,7 +19,7 @@ module FCPrimesMultiplicationTableLib
 
             if helpRequested?
                 displayUsage
-            elsif numberOfPrimes < 1 
+            elsif self.numberOfPrimes < 1 
                 displayInvalidNumberOfPrimes
             else
                 generatePrimes
@@ -100,7 +100,7 @@ module FCPrimesMultiplicationTableLib
         # Returns the number of prime numbers to be generated
         def self.numberOfPrimes
 
-            @@cmdArgs["count"] || FCPrimesMultiplicationTableLib::DEFAULT_NUM_COUNT
+            (@@cmdArgs["count"] || FCPrimesMultiplicationTableLib::DEFAULT_NUM_COUNT).to_i
         end
 
         # Returns an indication, if a --help/-help command was provided
