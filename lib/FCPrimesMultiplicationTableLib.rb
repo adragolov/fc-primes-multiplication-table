@@ -1,0 +1,6 @@
+require_relative "FCPrimesMultiplicationTableLib/MathServices/mathServices"
+require_relative "FCPrimesMultiplicationTableLib/libInfo"
+
+module FCPrimesMultiplicationTableLib 
+
+end
