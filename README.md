@@ -65,4 +65,4 @@ chmod +755 primes-gen-tests
 ## Things that could be improved
 
 - More elegant prime numbers algorithm, e.g. https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes or https://en.wikipedia.org/wiki/Sieve_of_Sundaram
-- Removing reduntant mathematical ops and rely
+- Removing reduntant mathematical ops, fallback to standard Math- APIs.
