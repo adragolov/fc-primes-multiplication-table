@@ -11,7 +11,7 @@ This repository serves the result for a coding challenge with the following defi
 
 From the project root directory:
 
-```
+```ruby
 # Navigate and give permissions to shell script
 cd bin/
 chmod +755 primes-gen
@@ -31,7 +31,7 @@ chmod +755 primes-gen
 
 The same principle, for a different script - 'primes-gen-tests'
 
-```
+```ruby
 cd bin/
 chmod +755 primes-gen-tests
 ./primes-gen-tests
