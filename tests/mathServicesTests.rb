@@ -7,8 +7,8 @@ module FCPrimesMultiplicationTableLib
         
         MATH_SERVICES = FCPrimesMultiplicationTableLib::MathServices
 
-        # each sample is composed of numerics only with top limit of 10
-        # expecting max value squared to be 100
+        # each sample is composed of numerics only. The test verifies that
+        # the getMaxValueSquared! performs computation correctly.
         def testMaxValueSquared_default_use
 
             samples = [
@@ -21,9 +21,10 @@ module FCPrimesMultiplicationTableLib
 
             samples.each {|arr| 
                 puts "[testMaxValueSquared_default_use] Test with #{arr}"
+                maxSquaredValue = arr.max ** 2 
                 assert_equal(
                     MATH_SERVICES.getMaxValueSquared!(arr),
-                    100
+                    maxSquaredValue
                 )
             }
         end
@@ -52,7 +53,8 @@ module FCPrimesMultiplicationTableLib
             end
         end
 
-        # tests the canMultiplyArgs method with positive expecation (truth)
+        # tests the canMultiplyArgs method with positive expecation -
+        # each sample is expected to return truth
         def testCanMultiplyArgs_positive
 
             positives = [

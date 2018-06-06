@@ -71,5 +71,28 @@ module FCPrimesMultiplicationTableLib
                 assert_equal computed[idx], @@first1000primes[idx]
             }
         end
+
+        # verifies that the generator algorithm returns all prime numbers until 1000 and checks
+        # that the sequence matches all known @@first1000primes <= 1000
+        def testGetPrimesUntil1000
+
+            generator = MATH_SERVICES::PrimeNumFinder.new
+
+            computed = generator.getPrimesUntil(1000);
+
+            assert_true computed.is_a? Array
+
+            known = @@first1000primes.select {
+                |p|
+                p <= 1000
+            }
+
+            assert_equal(computed.length, known.length)
+
+            computed.each_with_index{ |p, idx|
+
+                assert_equal computed[idx], @@first1000primes[idx]
+            }
+        end
     end
 end

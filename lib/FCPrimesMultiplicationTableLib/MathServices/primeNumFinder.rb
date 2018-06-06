@@ -7,10 +7,15 @@ module FCPrimesMultiplicationTableLib
         #
         class PrimeNumFinder
 
-            public 
-            
+            # Retrieves an array with all prime numbers  until a given number 'n'.
+            # Argument n<2 results in an empty array.
             def getPrimesUntil(n)
 
+                return Array.new if n.to_i < 2
+                
+                result = (2..n.to_i).select do |v|
+                    self.isPrime?(v)
+                end
             end
 
             # Retrieves an array of the first n prime numbers
