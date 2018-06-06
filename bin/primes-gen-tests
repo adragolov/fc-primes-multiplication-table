@@ -1,5 +1,5 @@
 #!/bin/bash
  
-echo 'Starting test run'
-ruby ../tests/*
-echo 'Test run finished'
+echo 'Starting test run1'
+ruby ../tests/primeNumFinderTests.rb
+echo 'Test run finished1'

@@ -1,7 +1,7 @@
 require_relative '../lib/FCPrimesMultiplicationTableLib/MathServices/mathServices'
 require "test/unit"
 
-module Tests 
+module FCPrimesMultiplicationTableLib 
     
     class MathServicesTests < Test::Unit::TestCase
         
