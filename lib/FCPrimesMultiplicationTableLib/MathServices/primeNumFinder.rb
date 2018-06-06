@@ -26,7 +26,7 @@ module FCPrimesMultiplicationTableLib
                 nextPrime = 2
                 normalized = n.to_i
 
-                return results if normalized < 2
+                return results if normalized < 1
                 
                 results.push nextPrime
 

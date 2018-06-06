@@ -9,7 +9,7 @@ module FCPrimesMultiplicationTableLib
     DEFAULT_NUM_COUNT = 10
     # The minimum cell width (in character count) to be used when 
     # rendering the output prime multiplications table.
-    # A bigger value will be used, if the maximum multiplicatin product
+    # A bigger value will be used, if the maximum multiplication product
     # exceeds this value.
     MIN_CELL_WIDTH = 5
     # The number of white space characters to be used as padding on the

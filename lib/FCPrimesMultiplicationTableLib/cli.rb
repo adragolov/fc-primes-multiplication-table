@@ -119,8 +119,9 @@ USAGE:
         --help, -help       Command that triggers the display of this text
 
         --count, -count     Configures the number of prime numbers to be 
-                            generated. If not specified explicitly, a default 
-                            value of 10 is used.
+                            generated. At least two numbers expected. 
+                            If not specified explicitly, a default value
+                            of 10 is used.
             }
         end
     end
