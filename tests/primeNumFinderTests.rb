@@ -54,5 +54,22 @@ module FCPrimesMultiplicationTableLib
                 end
             }
         end
+
+        # verifies that the generator algorithm computes the first 1000 primes and the computed
+        # sequence matches the already known @@first1000primes
+        def testGetFirstNPrimes_first1000
+
+            generator = MATH_SERVICES::PrimeNumFinder.new
+
+            computed = generator.getFirstNPrimes(1000);
+
+            assert_true computed.is_a? Array
+            assert_equal(computed.length, 1000)
+
+            computed.each_with_index{ |p, idx|
+
+                assert_equal computed[idx], @@first1000primes[idx]
+            }
+        end
     end
 end

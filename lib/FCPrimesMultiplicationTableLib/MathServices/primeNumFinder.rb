@@ -13,8 +13,26 @@ module FCPrimesMultiplicationTableLib
 
             end
 
+            # Retrieves an array of the first n prime numbers
+            # Argument n<2 results in an empty array.
             def getFirstNPrimes(n)
                 
+                results = Array.new
+                nextPrime = 2
+                normalized = n.to_i
+
+                return results if normalized < 2
+                
+                results.push nextPrime
+
+                # until we get enough results, compute next primes
+                while results.length < normalized
+
+                    nextPrime = self.getNextPrime(nextPrime)
+                    results.push nextPrime
+                end
+
+                results
             end
 
             # Find the next prime number after a given argument
